@@ -15,13 +15,13 @@ composer require abdallamohammed/laravel-eloquent-filter
 Edit config/app.php (Skip this step if you are using laravel 5.5+)
 
 ```php
-LaravelEloquentFilter\ServiceProvider::class,
+LaravelEloquentFilter\Providers\LaravelServiceProvider::class,
 ```
 
 Copy the package config to your local config
 
 ```bash
-php artisan vendor:publish --provider="LaravelEloquentFilter\ServiceProvider"
+php artisan vendor:publish --provider="LaravelEloquentFilter\Providers\LaravelServiceProvider"
 ```
 
 In the `config/eloquentfilter.php` config file.  Set the namespace your model filters will reside in
@@ -37,7 +37,7 @@ In the `config/eloquentfilter.php` config file.  Set the namespace your model fi
 In `bootstrap/app.php`
 
 ```php
-$app->register(LaravelEloquentFilter\LumenServiceProvider::class);
+$app->register(LaravelEloquentFilter\Providers\LumenServiceProvider::class);
 ```
 
 ##### Change The Default Namespace

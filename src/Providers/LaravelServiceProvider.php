@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelEloquentFilter;
+namespace LaravelEloquentFilter\Providers;
 
-use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use LaravelEloquentFilter\Commands\MakeFilterCommand;
 
-class ServiceProvider extends LaravelServiceProvider
+class LaravelServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
