@@ -1,0 +1,17 @@
+<?php 
+
+namespace {{namespace}};
+
+use LaravelEloquentFilter\BaseFilter;
+
+class {{class}} extends BaseFilter
+{
+    /**
+     * Registered filters to operate upon.
+     *
+     * @var array
+     */
+    protected $filters = [
+        //
+    ];
+}
