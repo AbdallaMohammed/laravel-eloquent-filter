@@ -14,6 +14,6 @@ class LumenServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->commands(MakeEloquentFilter::class);
+        $this->commands(MakeFilterCommand::class);
     }
 }
