@@ -9,7 +9,7 @@ A simple Laravel, and Lumen package to filter models, and relations
 via composer
 
 ```bash
-composer require abdallahmohammed/laravel-eloquent-filter
+composer require abdallahmohammed/laravel-eloquent-filter:dev-master
 ```
 
 Edit config/app.php (Skip this step if you are using laravel 5.5+)
@@ -55,10 +55,10 @@ config(['laravel-eloquent-filter.namespace' => "App\\Http\\Filters\\"]);
 You can create a model filter with the following artisan command
 
 ```bash
-php artisan make:filter App\Models\User
+php artisan make:filter User
 ```
 
-Where `App\Models\User` is the Eloquent Model you are creating the filter for.  This will create `app/Http/Filters/UserFilter.php`
+Where `User` is the Eloquent Model name you are creating the filter for.  This will create `app/Http/Filters/UserFilter.php`
 
 >The command also supports psr-4 namespacing for creating filters.
 

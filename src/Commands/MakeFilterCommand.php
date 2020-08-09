@@ -101,6 +101,16 @@ class MakeFilterCommand extends Command
     /**
      * @return string
      */
+    private function getClassBasename($class)
+    {
+        $class = is_object($class) ? get_class($class) : $class;
+
+        return basename(str_replace('\\', '/', $class));
+    }
+
+    /**
+     * @return string
+     */
     public function getPath()
     {
         return $this->laravel->path.DIRECTORY_SEPARATOR.$this->getFileName();
@@ -112,6 +122,14 @@ class MakeFilterCommand extends Command
     public function getFileName()
     {
         return str_replace([$this->getAppNamespace(), '\\'], ['', DIRECTORY_SEPARATOR], $this->getClassName().'.php');
+    }
+
+    /**
+     * @return string
+     */
+    public function getAppNamespace()
+    {
+        return $this->laravel->getNamespace();
     }
 
     /**
