@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Hash;
 use Tests\Filters\TestModelFilter;
 use Tests\Models\TestModel;
@@ -45,5 +46,17 @@ class FilterTest extends TestCase
         ]))->count();
 
         $this->assertEquals($count, 0);
+    }
+
+    /** @test */
+    public function it_can_ignore_empty_values()
+    {
+        Config::set('laravel-eloquent-filter.ignore_empty', true);
+        
+        $count = $this->model->filter(new TestModelFilter([
+            'name' => '',
+        ]))->count();
+
+        $this->assertEquals($count, 1);
     }
 }

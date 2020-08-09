@@ -117,7 +117,7 @@ public function name($value) {
 }
 ```
 
->Side note: the empty values are not ignored so if you want to filter only for non-empty values you have to check if the value is not empty
+>Side note: the empty values are not ignored by default so if you want to filter only for non-empty values you have to check if the value is not empty, or you can simply change it for the package config file
 
 Now let's imagine that you want to show a user called John even if the filter is not exists you have to do something like that.
 

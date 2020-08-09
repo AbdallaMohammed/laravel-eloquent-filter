@@ -4,6 +4,7 @@ namespace LaravelEloquentFilter;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 abstract class BaseFilter
 {
@@ -51,6 +52,10 @@ abstract class BaseFilter
         $this->builder = $builder;
         foreach ($this->getFilters() as $filter) {
             $value = isset($this->values[$filter]) ? $this->values[$filter] : '';
+
+            if (Config::get('laravel-eloquent-filter.ignore_empty', false) && empty($value)) {
+                continue;
+            }
 
             if (array_key_exists($filter, $this->values)) {
                 $methodName = Str::camel($filter);
