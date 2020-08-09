@@ -74,7 +74,7 @@ class MakeFilterCommand extends Command
 
         $this->makeDirectory($path);
 
-        $stubPath = Config::get('laravel-eloquent-filter.stub', __DIR__.'/../stubs/filter.stub');
+        $stubPath =  __DIR__.'/../stubs/filter.stub';
         
         if (! $this->files->exists($stubPath) || ! is_readable($stubPath)) {
             $this->error(sprintf('File "%s" does not exist or is unreadable.', $stubPath));
@@ -138,7 +138,7 @@ class MakeFilterCommand extends Command
         $className = array_pop($parts);
         $ns = count($parts) > 0 ? implode('\\', $parts).'\\' : '';
 
-        $fqClass = Config::get('laravel-eloquent-filter.namespace', 'App\\Filters\\').$ns.$className;
+        $fqClass = Config::get('laravel-eloquent-filter.namespace', 'App\\Http\\Filters\\').$ns.$className;
 
         if (substr($fqClass, -6, 6) !== 'Filter') {
             $fqClass .= 'Filter';

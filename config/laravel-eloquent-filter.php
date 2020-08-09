@@ -11,19 +11,6 @@ return [
      |
      */
 
-    'namespace' => 'App\\Filters\\',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom generator stub
-    |--------------------------------------------------------------------------
-    |
-    | If you want to override the default stub this package provides
-    | you can enter the path to your own at this point
-    |
-    */
-//    'generator' => [
-//        'stub' => app_path('stubs/modelfilter.stub')
-//    ]
+    'namespace' => 'App\\Http\\Filters\\',
 
 ];
