@@ -33,7 +33,7 @@ class FilterCommandTest extends TestCase
         $this->command->shouldReceive('argument')->andReturn($argument);
         $this->command->makeClassName();
 
-        $this->assertEquals("App\\Filters\\$class", $this->command->getClassName());
+        $this->assertEquals("App\\Http\\Filters\\$class", $this->command->getClassName());
     }
 
     public function commandDataProvider()
