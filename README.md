@@ -9,7 +9,7 @@ A simple Laravel, and Lumen package to filter models, and relations
 via composer
 
 ```bash
-composer require abdallamohammed/laravel-eloquent-filter
+composer require abdallahmohammed/laravel-eloquent-filter
 ```
 
 Edit config/app.php (Skip this step if you are using laravel 5.5+)
