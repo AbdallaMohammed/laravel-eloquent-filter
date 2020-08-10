@@ -24,7 +24,7 @@ Copy the package config to your local config
 php artisan vendor:publish --provider="LaravelEloquentFilter\Providers\LaravelServiceProvider"
 ```
 
-In the `config/eloquentfilter.php` config file.  Set the namespace your model filters will reside in
+In the `config/laravel-eloquent-filter.php` config file.  Set the namespace your model filters will reside in
 
 ```php
 'namespace' => "App\\Http\\Filters\\",
